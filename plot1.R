@@ -6,4 +6,7 @@ house_power1=subset(house_power,Date=="2007-02-01"|Date=="2007-02-02")
 head(house_power1)
 str(house_power1)
 house_power1[,3]=as.numeric(house_power1[,3])
+png("plot1.png",width=480, height=480)
 with(house_power1,hist(Global_active_power,col="red",main="Global_active_power",xlab="Global_active_power(kilowatts)"))
+#dev.png(png,file="plot2.png",width=480, height=480)?
+dev.off()
